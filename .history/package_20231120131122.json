@@ -1,0 +1,39 @@
+{
+  "name": "liushi-cli",
+  "version": "1.0.0",
+  "description": "It`s a cli, which supports rapid construction of front-end projects",
+  "main": "cli.js",
+  "bin": "cli.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepublishOnly": "npm run test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarchRory/liushi-cli.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "MarchRory",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarchRory/liushi-cli/issues"
+  },
+  "homepage": "https://github.com/MarchRory/liushi-cli#readme",
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^5.2.2"
+  }
+}

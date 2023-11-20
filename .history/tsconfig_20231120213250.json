@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "esModuleInterop": true,
+    "module": "commonJS",
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["es6", "DOM"],
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "sourceMap": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "include": ["lib", "bin/cli.js"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}

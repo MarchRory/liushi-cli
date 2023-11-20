@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "sourceMap": false,
+    "noEmit": true,
+    "noEmitHelpers": false,
+    "importHelpers": false,
+    "strictNullChecks": false,
+    "allowUnreachableCode": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule":true,
+    "lib": ["es6"],
+    "typeRoots": ["./node_modules/@types"],
+    "outDir": "./src", // 重定向输出目录
+  },
+  "exclude": [ // 不参与打包的目录
+    "node_modules",
+    "build",
+    "**/*.test.ts",
+    "temp",
+    "scripts",
+    "./src/__tests__"
+  ],
+  "include": ["./lib", "package"],
+  "esModuleInterop": true,
+  "allowSyntheticDefaultImports": true,
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "ts-node": {
+    "esm": true
+  }
+}

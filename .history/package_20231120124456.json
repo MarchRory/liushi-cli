@@ -1,0 +1,22 @@
+{
+  "name": "liushi-cli",
+  "version": "1.0.0",
+  "description": "It`s a cli, which supports rapid construction of front-end projects",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarchRory/liushi-cli.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "MarchRory",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarchRory/liushi-cli/issues"
+  },
+  "homepage": "https://github.com/MarchRory/liushi-cli#readme"
+}

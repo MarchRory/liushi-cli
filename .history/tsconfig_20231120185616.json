@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["es6", "DOM"],
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "sourceMap": true,
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "ts-node": {
+    "esm": true,
+  },
+  "include": ["lib", "bin/cli.js"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}
