@@ -12,12 +12,12 @@ const initProgram = (): Command => {
     for (let i = 0; i < commandList.length; i++) {
         program.command(commandList[i].command)
             .description(commandList[i].description)
-            .option(commandList[i].option[0].flags, commandList[i].option[0].description)
-            .action(commandList[i].action)
-        /*         commandList[i].option.forEach((opt) => {
-                    program = program.option(opt.flags, opt.description)
-                })
-                program.action(commandList[i].action) */
+        // .option(commandList[i].option[0].flags, commandList[i].option[0].description)
+        // .action(commandList[i].action)
+        commandList[i].option.forEach((opt) => {
+            program = program.option(opt.flags, opt.description)
+        })
+        program.action(commandList[i].action)
     }
 
     program

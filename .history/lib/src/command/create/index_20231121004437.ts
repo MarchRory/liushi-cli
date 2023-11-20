@@ -1,4 +1,6 @@
+import { program } from "../../index";
 import { create } from "./utils/index.ts";
+import { createArgsModel } from '../types/create.ts'
 import { commandConfig } from "../types/command.ts";
 
 export const createCommand: commandConfig = {

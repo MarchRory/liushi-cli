@@ -14,10 +14,10 @@ const initProgram = (): Command => {
             .description(commandList[i].description)
             .option(commandList[i].option[0].flags, commandList[i].option[0].description)
             .action(commandList[i].action)
-        /*         commandList[i].option.forEach((opt) => {
-                    program = program.option(opt.flags, opt.description)
-                })
-                program.action(commandList[i].action) */
+        commandList[i].option.forEach((opt) => {
+            program = program.option(opt.flags, opt.description)
+        })
+        program.action(commandList[i].action)
     }
 
     program

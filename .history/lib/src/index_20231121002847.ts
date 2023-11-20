@@ -1,0 +1,18 @@
+import { Command } from 'commander'
+
+export const program = new Command()
+
+const initProgram = (): Command => {
+
+    program
+        .name('liushi-cli')
+        .description('An interesting frontend project cli')
+
+
+
+    program
+        .version(`v${packageJSON.version}`)
+        .usage('<command> [option]')
+    return program.parse(process.argv)
+}
+initProgram()
