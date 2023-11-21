@@ -1,0 +1,6 @@
+# IDE cache
+.history
+.vscode
+
+# other
+node_modules
