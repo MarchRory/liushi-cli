@@ -7,7 +7,7 @@
     "liushi-cli": "./lib/bin/cli.ts"
   },
   "scripts": {
-    "dev": "tsc && liushi-cli",
+    "dev": "tsc && cli.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "format": "prettier --write \"lib/**/*.ts\" \"lib/**/*.js\"",

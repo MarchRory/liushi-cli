@@ -9,7 +9,11 @@ const initProgram = (): Command => {
         .name('liushi-cli')
         .description('An interesting frontend project cli')
 
-    // 批量注册命令
+    /*     for (let i = 0; i < commandList.length; i++) {
+            
+            //program.addCommand(commandList[i])
+        } */
+
     for (let i = 0; i < commandPath.length; i++) {
         require(`${commandPath[i]}`)
     }

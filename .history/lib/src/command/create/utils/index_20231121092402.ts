@@ -9,6 +9,7 @@ export async function create(name: createArgsModel["name"] = 'my-app', options?:
 
     // 拼接待创建项目的地址
     const target = path.join(cwd, name)
+    console.log('target: ', target)
 
     // 是否强制覆盖
     /*     if (fsExtra.existsSync(target)) {
