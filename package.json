@@ -2,9 +2,9 @@
   "name": "liushi-cli",
   "version": "1.0.0",
   "description": "It`s a cli, which supports rapid construction of front-end projects",
-  "main": "./lib/bin/cli.ts",
+  "main": "./lib/bin/cli",
   "bin": {
-    "liushi-cli": "./lib/bin/cli.ts"
+    "liushi-cli": "./lib/bin/cli"
   },
   "scripts": {
     "dev": "tsc && liushi-cli",
@@ -46,11 +46,15 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "axios": "^1.6.2",
+    "chalk": "^4.1.0",
     "commander": "^11.1.0",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.7.0",
     "fs-extra": "^11.1.1",
-    "inquirer": "^9.2.12",
+    "inquirer": "^8.0.0",
     "install": "^0.13.0",
-    "ora": "^7.0.1",
+    "ora": "^5.1.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.2"
   }
