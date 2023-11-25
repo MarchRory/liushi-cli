@@ -32,7 +32,7 @@ For the convenience of management, I store them all in this organization, [see h
 - Refact if necessary
 - More comprehensive options
 
-# Feature plans
+# Future plans
 - Free to choose basic libraries
 - Performance optimization
 - More templates, including mobile, web, PC, etc.
