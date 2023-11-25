@@ -1,5 +1,5 @@
-import { create } from "./utils/index.ts";
-import { program } from "../../index.ts";
+import { create } from "./utils/index";
+import { program } from "../../index";
 
 program
     .command('create <project-name>')

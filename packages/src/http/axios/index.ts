@@ -24,6 +24,10 @@ class Request {
             (response: AxiosResponse) => {
                 const { data } = response
                 return data
+            },
+            (err: AxiosError) => {
+                const { cause } = err
+                return Promise.reject(cause)
             }
         )
     }

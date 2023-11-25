@@ -21,7 +21,6 @@ const downloadOpts: GotOptions<null> = {
 const loading = async (fn, message, ...args) => {
     const spinner = ora(message)
     spinner.start()
-
     try {
         const result = await fn(...args)
         spinner.succeed()
@@ -38,7 +37,7 @@ const loading = async (fn, message, ...args) => {
  * @returns 
  */
 export const chooseTemplate = async (name: string, targetDir: string) => {
-    const repoList = await loading(getReposList, 'Pulling template list...')
+    const repoList = await loading(getReposList, 'Pulling template list...\n')
     if (!repoList) return;
     const repos: string[] = repoList.map((item) => item.name)
     const { repoName } = await inquirer.prompt({

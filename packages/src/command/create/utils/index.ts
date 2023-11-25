@@ -3,23 +3,17 @@ const fsExtra = require('fs-extra')
 const inquirer = require('inquirer')
 const figlet = require('figlet')
 const chalk = require("chalk")
-import { createArgsModel } from "../../types/create.ts";
-import { chooseTemplate, chooseVersion, downloadTemplate } from '../../../generator/index.ts'
+import { createArgsModel } from "../../types/create";
+import { chooseTemplate, chooseVersion, downloadTemplate } from '../../../generator/index'
 
 export async function create(name: createArgsModel["name"] = 'my-app', options?: createArgsModel["options"]) {
-    // 获取当前所在目录
     const cwd = process.cwd()
 
-    // 拼接待创建项目的地址
     const targetPath = path.join(cwd, name)
-    // 是否强制覆盖
     if (fsExtra.existsSync(targetPath)) {
         if (options && options.force) {
-            // 启用强制覆盖, 移除原有目录结构
             fsExtra.removeSync(targetPath)
         } else {
-            // todo: 风险操作再确认, 是否要强制覆盖已有文件？
-            // 使用inquirer实现和用户在终端的交互
             let { isConfirm } = await inquirer.prompt([
                 {
                     name: "isConfirm",

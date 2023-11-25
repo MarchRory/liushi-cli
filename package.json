@@ -2,23 +2,23 @@
   "name": "liushi-cli",
   "version": "1.0.0",
   "description": "It`s a cli, which supports rapid construction of front-end projects",
-  "main": "./lib/bin/cli.ts",
+  "main": "dist/bin/cli.js",
   "bin": {
-    "liushi-cli": "lib/bin/cli.ts"
+    "liushi-cli": "dist/bin/cli.js"
   },
   "scripts": {
-    "dev": "tsc && liushi-cli",
+    "dev": "liushi-cli",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "format": "prettier --write \"lib/**/*.ts\" \"lib/**/*.js\"",
+    "prepublishOnly": "npm run lint",
     "lint": "tslint -p tsconfig.json",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "files": [
-    "lib/**/*",
-    "bin/*"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -31,7 +31,10 @@
     "create",
     "template"
   ],
-  "author": "MarchRory",
+  "author": {
+    "name": "MarchRory",
+    "email": "2287722838@qq.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MarchRory/liushi-cli/issues"
@@ -56,7 +59,6 @@
     "got": "^13.0.0",
     "inquirer": "^8.0.0",
     "install": "^0.13.0",
-    "liushi-cli": "^1.0.0",
     "ora": "^5.1.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.2"
