@@ -3,6 +3,7 @@ import type { AxiosError, AxiosInstance, AxiosResponse, InternalAxiosRequestConf
 import { MyAxiosConfig, RequestConfig } from "./types";
 const https = require("https")
 const chalk = require("chalk")
+// Maybe I will use got instead of axios one day
 
 class Request {
     http: AxiosInstance;
@@ -48,7 +49,7 @@ class Request {
     }
 }
 
-const agent = new https.Agent({
+export const agent = new https.Agent({
     rejectUnauthorized: false
 })
 const request = new Request({ baseURL: "https://api.github.com", timeout: 30 * 1000, httpsAgent: agent })

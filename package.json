@@ -2,9 +2,9 @@
   "name": "liushi-cli",
   "version": "1.0.0",
   "description": "It`s a cli, which supports rapid construction of front-end projects",
-  "main": "./lib/bin/cli",
+  "main": "./lib/bin/cli.ts",
   "bin": {
-    "liushi-cli": "./lib/bin/cli"
+    "liushi-cli": "lib/bin/cli.ts"
   },
   "scripts": {
     "dev": "tsc && liushi-cli",
@@ -12,7 +12,6 @@
     "build": "tsc",
     "format": "prettier --write \"lib/**/*.ts\" \"lib/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "prepublishOnly": "npm run test && npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
@@ -29,7 +28,8 @@
     "cli",
     "npm",
     "vue",
-    "create"
+    "create",
+    "template"
   ],
   "author": "MarchRory",
   "license": "MIT",
@@ -46,14 +46,17 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@types/got": "^9.6.12",
     "axios": "^1.6.2",
     "chalk": "^4.1.0",
     "commander": "^11.1.0",
     "download-git-repo": "^3.0.2",
     "figlet": "^1.7.0",
     "fs-extra": "^11.1.1",
+    "got": "^13.0.0",
     "inquirer": "^8.0.0",
     "install": "^0.13.0",
+    "liushi-cli": "^1.0.0",
     "ora": "^5.1.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.2"

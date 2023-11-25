@@ -1,6 +1,7 @@
 const path = require("path")
 const fsExtra = require('fs-extra')
 const inquirer = require('inquirer')
+const figlet = require('figlet')
 const chalk = require("chalk")
 import { createArgsModel } from "../../types/create.ts";
 import { chooseTemplate, chooseVersion, downloadTemplate } from '../../../generator/index.ts'
@@ -50,13 +51,22 @@ export async function create(name: createArgsModel["name"] = 'my-app', options?:
     if (!chosenVersion) return
     downloadTemplate(chosenRepo, chosenVersion, targetPath)
         .then(() => {
-            console.log(`\r\nSuccessfully created project ${chalk.magenta(name)}`)
-            console.log(`\r\n  cd ${chalk.magenta(name)}`)
-            console.log('\r\n  npm install')
-            console.log('  npm run dev\r\n')
-            console.log(`${chalk.magenta('now, code happily~~~')}`)
+            console.log('\r\n', figlet.textSync('LiuShi', {
+                font: 'Ghost',
+                width: 60,
+                verticleLayout: 'default',
+                horizontalLayout: 'default',
+                WhitespaceBreak: true
+            }))
+
+            console.log(`\rCreate project ${chalk.yellow(name)} Successfully\r\n  \r\n${chalk.yellow('  First, follow these steps below')} `)
+            console.log(`\r\n  1、cd ${chalk.yellow(name)}`)
+            console.log(`\r\n  2、${'npm install'}`)
+            console.log('\r\n  3、npm run dev')
+            console.log(`${chalk.yellow('\r\n  Then, code happily~~\n')}`)
         })
         .catch((e) => {
-            console.log(`${chalk.red('download template failed')}: `, e)
+            let errMessage = 'download template failed, please check you network or contact with us: \nhttps://github.com/MarchRory/liushi-cli/issues'
+            console.log(e, `\n\n${chalk.red(errMessage)}`)
         })
 }

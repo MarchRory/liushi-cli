@@ -26,7 +26,7 @@
     "scripts",
     "./src/__tests__"
   ],
-  "include": ["./lib", "package"],
+  "include": ["./lib", "package", "node_modules"],
   "esModuleInterop": true,
   "allowSyntheticDefaultImports": true,
   "compileOnSave": false,

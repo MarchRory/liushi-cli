@@ -1,12 +1,22 @@
 import { getReposList, getVersionList } from "../http/api"
 import { organizationName } from '../http/api/index'
+import { agent } from "../http/axios"
+import { GotOptions } from 'got'
 const inquirer = require('inquirer')
 const ora = require("ora")
 const chalk = require("chalk")
 const path = require("path")
-var downloadGitRepo = require("download-git-repo")
 const util = require("util")
-downloadGitRepo = util.promisify(downloadGitRepo)
+const downloadGitRepo = util.promisify(require("download-git-repo"))
+
+/**  
+ * the agent is nessceary or you will get a error message, like GotError [RequestError]: unable to verify the first certificate
+ * to know more options of download-git-repo options, please open this link:
+ * @see https://github.com/sindresorhus/got/blob/main/documentation/2-options.md
+ */
+const downloadOpts: GotOptions<null> = {
+    agent
+}
 
 const loading = async (fn, message, ...args) => {
     const spinner = ora(message)
@@ -17,14 +27,14 @@ const loading = async (fn, message, ...args) => {
         spinner.succeed()
         return result
     } catch (e) {
-        spinner.fail('Request failed')
+        spinner.fail('Request failed: \n', e)
     }
 }
 
 /**
  * choose template
- * @param name 
- * @param targetDir 
+ * @param name project name
+ * @param targetDir
  * @returns 
  */
 export const chooseTemplate = async (name: string, targetDir: string) => {
@@ -68,20 +78,18 @@ export const chooseVersion = async (repoName: string) => {
 export const downloadTemplate = (repoName: string, version: string, targetDir: string) => {
     return new Promise(async (resolve, reject) => {
         const templateUrl = `${organizationName}/${repoName}${version ? '#' + version : ""}`
-        const res = await loading(
-            downloadGitRepo,
-            `downloading the ${chalk.cyan(repoName)}\n`,
-            templateUrl,
-            path.resolve(process.cwd(), targetDir),
-            { close: false },
-            (e) => {
-                console.log(e)
-            }
-        )
-        if (res) {
+        try {
+            await loading(
+                downloadGitRepo,
+                `downloading the ${chalk.cyan(repoName)}\n`,
+                templateUrl,
+                path.resolve(process.cwd(), targetDir),
+                { ...downloadOpts }
+            )
             resolve(true)
+        } catch (err) {
+            reject(err)
         }
-        else reject(res)
-    })
 
+    })
 }
