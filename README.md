@@ -1,9 +1,11 @@
 # liushi-cli
- As the number of projects grows, starting a new project each time requires too much foundational configuration, which seems cumbersome and unnecessary. Therefore, this CLI was developed. It comes with some commonly used project templates, each of which is pre-configured with the necessary libraries, making it ready to use. You only need to choose the one that suits your needs, then
+ As the number of projects grows, starting a new project each time requires too much foundational configuration, which seems cumbersome and unnecessary. 
+ Therefore, this CLI was developed. It comes with some commonly used project templates, each of which is pre-configured with the necessary libraries, making it ready to use. 
+ You only need to choose the one that suits your needs, then
 ```shell
 npm install
 ```
-and you can immediately embark on an exciting development journey.
+Finally, you can immediately embark on an exciting development journey.
 
 # install 
 ```shell
@@ -17,6 +19,7 @@ liushi-cli --help
 ```
 ## create project
 ```shell
+# in current version, only one option this command provides, it`s -f, which means force override current folder
 liushi-cli create <project-name> [options]
 ```
 
