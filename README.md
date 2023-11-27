@@ -1,6 +1,8 @@
 # liushi-cli
  As the number of projects grows, starting a new project each time requires too much foundational configuration, which seems cumbersome and unnecessary. 
+ 
  Therefore, this CLI was developed. It comes with some commonly used project templates, each of which is pre-configured with the necessary libraries, making it ready to use. 
+ 
  You only need to choose the one that suits your needs, then
 ```shell
 npm install
