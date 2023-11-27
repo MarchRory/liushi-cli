@@ -1,7 +1,7 @@
 {
   "name": "liushi-cli",
-  "version": "1.0.0",
-  "description": "It`s a cli, which supports rapid construction of front-end projects",
+  "version": "1.1.0",
+  "description": "A simple cli, which supports rapid construction of front-end projects \nAll of templates it provides had been completed basic configuration\nYou just need npm install, then begin to code",
   "main": "dist/bin/cli.js",
   "bin": {
     "liushi-cli": "dist/bin/cli.js"
