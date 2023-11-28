@@ -1,8 +1,16 @@
-# liushi-cli
-> Create more, Work less
+<h1 align="center">liushi-cli</h1>
+<h2 align="center">Create more, Work less</h2>
+<div align="center">
 
+[![](https://img.shields.io/badge/language-typescript-blue.svg)]()
 [![npm version](https://badge.fury.io/js/liushi-cli.svg)](https://www.npmjs.com/package/liushi-cli)
 [![Downloads](https://img.shields.io/npm/dm/liushi-cli.svg)](https://www.npmjs.com/package/liushi-cli)
+[![](https://img.shields.io/badge/license-MIT-black.svg)](./LICENSE)
+
+
+
+</div>
+
 
  As the number of projects grows, starting a new project each time requires too much foundational configuration, which seems cumbersome and unnecessary. 
  
@@ -14,7 +22,7 @@ npm install
 ```
 Finally, you can immediately embark on an exciting development journey.
 
-# install 
+# Install 
 ```shell
 npm install liushi-cli
 ```
@@ -30,18 +38,18 @@ liushi-cli --help
 liushi-cli create <project-name> [options]
 ```
 
-# tempalte list
+# Tempalte List
 - [v3-ts-tailwind-template](https://github.com/liushi-cli/v3-ts-tailwind-template): Vue3 + TypeScript + Pinia + TailwindCSS + Eslint + Prettier + axios
 
-# where the templates are?
+# Where the templates are?
 For the convenience of management, I store them all in this organization, [see here](https://github.com/orgs/liushi-cli/repositories)
 
-# current feature
+# Current feature
 - show help
 - template list, version list
 - create project depends on a specific version of template you choose
 
-# next version
+# Next version
 - Refact if necessary
 - More comprehensive options
 
