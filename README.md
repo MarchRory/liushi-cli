@@ -3,11 +3,10 @@
 <div align="center">
 
 [![](https://img.shields.io/badge/language-typescript-blue.svg)]()
+[![](https://img.shields.io/badge/github-cli-blue.svg)](https://github.com/MarchRory/liushi-cli)
 [![npm version](https://badge.fury.io/js/liushi-cli.svg)](https://www.npmjs.com/package/liushi-cli)
 [![Downloads](https://img.shields.io/npm/dm/liushi-cli.svg)](https://www.npmjs.com/package/liushi-cli)
 [![](https://img.shields.io/badge/license-MIT-black.svg)](./LICENSE)
-
-
 
 </div>
 
@@ -37,12 +36,12 @@ liushi-cli --help
 # in current version, only one option this command provides, it`s -f, which means force override current folder
 liushi-cli create <project-name> [options]
 ```
+# Where the templates are?
+For the convenience of management, I store them all in this organization, [see here](https://github.com/orgs/liushi-cli/repositories)
 
 # Tempalte List
 - [v3-ts-tailwind-template](https://github.com/liushi-cli/v3-ts-tailwind-template): Vue3 + TypeScript + Pinia + TailwindCSS + Eslint + Prettier + axios
 
-# Where the templates are?
-For the convenience of management, I store them all in this organization, [see here](https://github.com/orgs/liushi-cli/repositories)
 
 # Current feature
 - show help
