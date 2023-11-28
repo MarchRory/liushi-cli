@@ -25,6 +25,9 @@ liushi-cli --help
 liushi-cli create <project-name> [options]
 ```
 
+# tempalte list
+- [v3-ts-tailwind-template](https://github.com/liushi-cli/v3-ts-tailwind-template): Vue3 + TypeScript + Pinia + TailwindCSS + Eslint + Prettier + axios
+
 # where the templates are?
 For the convenience of management, I store them all in this organization, [see here](https://github.com/orgs/liushi-cli/repositories)
 
