@@ -40,6 +40,8 @@ liushi-cli create <project-name> [options]
 For the convenience of management, I store them all in this organization, [see here](https://github.com/orgs/liushi-cli/repositories)
 
 # Template List
+> All the templates we provide have completed the basic configuration and necessary examples
+> so you only need to focus on business
 - [v3-ts-tailwind-template](https://github.com/liushi-cli/v3-ts-tailwind-template): Vue3 + TypeScript + Pinia + TailwindCSS + Eslint + Prettier + axios
 
 
